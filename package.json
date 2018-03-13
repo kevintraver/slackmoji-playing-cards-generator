@@ -1,0 +1,23 @@
+{
+  "name": "slackmoji-playing-cards-generator",
+  "version": "1.0.0",
+  "description": "slackmoji playing card generator",
+  "main": "yamlGenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustonrr/slackmoji-playing-cards-generator.git"
+  },
+  "author": "rustonrr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rustonrr/slackmoji-playing-cards-generator/issues"
+  },
+  "homepage": "https://github.com/rustonrr/slackmoji-playing-cards-generator#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "js-yaml": "^3.11.0"
+  }
+}
