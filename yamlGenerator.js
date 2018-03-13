@@ -1,5 +1,6 @@
 require('dotenv').config();
 const yaml = require('js-yaml');
+const fs = require('fs');
 
 let suits = ["spades", "diamonds", "clubs", "hearts"];
 let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
@@ -15,7 +16,7 @@ function buildDeck(){
 			  suit: suits[i]
 			};
             card.name = card.value + card.suit[0].toUpperCase();
-            card.url = baseCardUrl + card.name + '.png';
+            card.url = `${baseCardUrl}${card.name}.png`;
 			deck.push(card);
 		}
 	}
@@ -23,6 +24,7 @@ function buildDeck(){
 }
 
 let yamlDeck = buildDeck().map( (card) => {
+    console.log(card.url);
     return {
         name: card.name,
         src: card.url
@@ -34,4 +36,4 @@ let yamlExport = {
     emojis: yamlDeck
 }
 
-console.log(yaml.safeDump(yamlExport));
+fs.writeFileSync( 'cards.yaml', yaml.safeDump(yamlExport) )
