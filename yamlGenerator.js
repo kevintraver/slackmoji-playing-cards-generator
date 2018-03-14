@@ -24,16 +24,15 @@ function buildDeck(){
 }
 
 let yamlDeck = buildDeck().map( (card) => {
-    console.log(card.url);
     return {
         name: card.name,
         src: card.url
     }
-}) 
+})
 
 let yamlExport = {
     title: 'cards',
     emojis: yamlDeck
 }
 
-fs.writeFileSync( 'cards.yaml', yaml.safeDump(yamlExport) )
+fs.writeFileSync( 'cards.yaml', yaml.safeDump(yamlExport, { lineWidth: 2000 }) )

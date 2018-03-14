@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rustonrr/slackmoji-playing-cards-generator#readme",
   "dependencies": {
+    "cloudinary": "^1.10.0",
     "dotenv": "^5.0.1",
     "js-yaml": "^3.11.0"
   }
