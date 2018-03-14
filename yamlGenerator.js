@@ -48,6 +48,19 @@ function getCardAliases(card) {
     aliases.push(`${suit}${value}`);
     aliases.push(`${value}${suit}`);
 
+    if(card.value == 1){
+        let aceArray = [];
+        // aliases.push( aliases.map( (alias) => {
+        //     return alias.replace('1', 'a');
+        // }) );
+
+        aliases.map( (alias) => {
+            // aliases.push(alias.replace('1', 'a'));
+            aliases.push(alias.replace('1', 'ace'))
+        }) 
+        
+    };
+
     return aliases;
 }
 
